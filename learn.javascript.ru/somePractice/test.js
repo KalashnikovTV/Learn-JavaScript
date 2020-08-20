@@ -1,4 +1,4 @@
-const userName = prompt('Ваше имя?')
+const userName = prompt('Ваше имя?');
 const questionUser = confirm(`Хотите стать специалистом JavaScript, ${userName}? Нажмите ок, если да или отмена, если не хотите`);
 
 if (questionUser == true) {
@@ -88,3 +88,79 @@ function min(a, b) {
 }
 min(2, 5);
 min(1, 1);
+
+
+
+let a = 17,
+    b = 10;
+
+let c = a - b,
+    d = 7;
+
+let result = c + d;
+console.log(result);
+
+
+
+let name = 'Максим';
+console.log(`Привет, ${name}`);
+
+let name = prompt('Введите ваше имя: ');
+
+alert(`Ваше имя: ${name}`);
+
+
+let str = 'abcde';
+
+console.log(str[0], str[2], str[4]);
+
+
+
+let arr = [2, 5, 3, 9];
+
+console.log((arr[0] * arr[1]) + (arr[2] * arr[3]));
+
+
+
+let daysWeek = {
+    1: 'Понедельник',
+    2: 'Вторник',
+    3: 'Среда',
+    4: 'Четверг',
+    5: 'Пятница',
+    6: 'Суббота',
+    7: 'Воскресенье'
+};
+
+console.log(daysWeek[5]);
+
+let day = 3;
+
+console.log(daysWeek[day]);
+
+
+let array = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
+
+console.log(array[1][0]);
+
+
+
+let obj = {js:['jQuery', 'Angular'], php: 'hello', css: 'world'};
+
+console.log(obj.js[0]);
+
+
+
+let arrDays = {
+    'ru': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+    'en': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+};
+
+console.log(`По русски(Monday) - ${arrDays.ru[0]}, а по английски(Среда) - ${arrDays.en[2]}`);
+
+let lang = 'en',
+    day = 3;
+
+console.log(`День недели: ${arrDays[lang][day-1]}`);
+
+
