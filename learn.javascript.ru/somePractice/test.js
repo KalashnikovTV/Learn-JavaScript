@@ -315,3 +315,47 @@ for (key in obj) {
 
 
 
+let array = [2, 5, 9, 15, 0, 4];
+
+for (let i = 0; i < array.length; i++) {
+    if (array[i] > 3 && array[i] < 10) {
+        console.log(array[i]);
+    }
+}
+
+
+let array = [1, 3, 6, -2, -9, 4],
+    sum = 0;
+
+for (let i = 0; i < array.length; i++) {
+    if (array[i] > 0) {
+        sum += array[i];
+        console.log(sum);
+    }
+}
+
+
+
+let array = [1, 2, 5, 9, 4, 13, 4, 10];
+
+for (let i = 0; i < array.length; i++) {
+    if (array[i] == 4) {
+        console.log('Есть!');
+        break;
+    }
+}
+
+
+
+let chrs = ['1', '2', '5'],
+    result = [10, 20, 30, 50, 235, 3000].filter(e => chrs.includes(e.toString()[0]));
+
+console.log(result);
+
+
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let i = 0; i < array.length; i++) {
+    document.write('-' + array[i]);
+}
