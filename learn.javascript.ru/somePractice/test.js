@@ -164,3 +164,154 @@ let lang = 'en',
 console.log(`День недели: ${arrDays[lang][day-1]}`);
 
 
+
+let test = false;
+
+if (test == true) {
+    console.log('Верно');
+} else {
+    console.log('Неверно');
+}
+
+
+let test = true;
+test == true ? console.log('Верно') : console.log('Неверно');
+
+
+
+let string = 'abcde';
+
+if (string[0] === 'a') {
+    console.log('Да');
+} else {
+    console.log('Нет');
+}
+
+
+
+let stringNumbers = '12345';
+
+if (stringNumbers[0] == 1 || stringNumbers[0] == 2 || stringNumbers[0] == 3) {
+    console.log('Да');
+} else {
+    console.log('Нет');
+}
+
+
+
+let numbersString = '123';
+
+console.log((+numbersString[0]) + (+numbersString[1]) + (+numbersString[2]));
+
+
+
+let sumSix = '123123';
+
+if ((+sumSix[0]) + (+sumSix[1]) + (+sumSix[2]) == (+sumSix[3]) + (+sumSix[4]) + (+sumSix[5])) {
+    console.log('Yes');
+} else {
+    console.log('No');
+}
+
+
+
+let i = 0;
+
+while (i < 100) {
+    i++;
+    console.log(i);
+}
+
+
+for (let i = 1 ; i <= 100; i++) {
+    console.log(i);
+}
+
+
+let b = 10;
+
+while (b < 33) {
+    b++;
+    console.log(b);
+}
+
+
+for (let b = 11; b <= 33; b++ ) {
+    console.log(b);
+}
+
+
+let b = 0;
+
+while (b < 100) {
+    b += 2;
+    console.log(b);
+}
+
+
+for (let i = 1; i <= 100; i++) {
+    i += 1;
+    console.log(i);
+}
+
+
+
+let a = 1,
+    sum = 0;
+
+while(a <= 100) {
+    sum += a;
+    a++;
+    console.log(sum);
+}
+
+
+for (let i = 1, sum = 0; i <= 100; i++) {
+    sum += i;
+    console.log(sum);
+}
+
+
+
+let arr = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+
+
+let arrTwo = [1, 2, 3, 4, 5],
+    result = 0;
+
+for (let i = 0; i < arrTwo.length; i++) {
+    result += arrTwo[i];
+    console.log(result);
+}
+
+
+
+let obj = {
+    green: 'зеленый',
+    red: 'красный',
+    blue: 'голубой'
+}
+
+for (key in obj) {
+    console.log(`Ключи объекта: ${key} отсюда свойства -> ${obj[key]}`);
+}
+
+
+
+let obj = {
+    Коля: 200,
+    Вася: 300,
+    Петя: 400
+}
+
+for (key in obj) {
+    console.log(`${key} - зарплата ${obj[key]} долларов.`);
+}
+
+
+
