@@ -359,3 +359,112 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 for (let i = 0; i < array.length; i++) {
     document.write('-' + array[i]);
 }
+
+
+
+let a = 10,
+    b = 3;
+
+console.log(a % b);
+
+
+if (a % b == 0) {
+    console.log(`Делится, рез-т деления: ${a / b}`);
+} else {
+    console.log(`Делится с остатком:: ${a % b}`);
+}
+
+
+
+let st = Math.pow(2, 10);
+console.log(st);
+
+console.log(Math.sqrt(245));
+
+
+
+let arr = [4, 2, 5, 19, 13, 0, 10],
+    sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    sum += Math.pow(arr[i], 3);
+}
+console.log('Сумма кубов массива: ' + sum + '. Квадратный корень из суммы кубов массива: ' + Math.sqrt(sum));
+
+
+
+console.log(Math.sqrt(379));
+console.log(Math.round(Math.sqrt(379)));
+console.log(Math.sqrt(379).toFixed(1));
+console.log(Math.sqrt(379).toFixed(2));
+
+
+
+let sqrt = (Math.sqrt(587)),
+    ceil = (Math.ceil(Math.sqrt(587))),
+    floor = (Math.floor(Math.sqrt(587)));
+
+let obj = {
+        'sqrt': sqrt,
+        'floor': ceil,
+        'ceil': floor
+}
+
+console.log(obj);
+
+
+
+console.log('Список чисел: 4, -2, 5, 19, -130, 0, 10');
+console.log('Максимальное число из списка: ' + Math.max(4, -2, 5, 19, -130, 0, 10));
+console.log('Минимальное число из списка: ' + Math.min(4, -2, 5, 19, -130, 0, 10));
+
+
+
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandomInt(1, 100));
+
+
+
+let array = [];
+for (i = 0; i < 10; i++) {
+    array[i] = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+}
+
+console.log(array);
+
+
+
+let a = -5,
+    b = 10;
+
+console.log(Math.abs(a - b));
+
+
+let a = 3,
+    b = 5,
+    c = Math.abs(a - b);
+
+console.log(c);
+
+
+
+let arr = [12, 15, 20, 25, 59, 79],
+    sumElement = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    sumElement += arr[i];
+}
+
+console.log('Сумма элементов массива: ' + sumElement);
+console.log('Среднее арифметическое его элементов: ' + (sumElement / arr.length));
+
+
+
+function factorial(n) {
+    return (n != 1) ? n * factorial(n - 1) : 1;
+}
+  
+console.log(factorial(4)); // 24
