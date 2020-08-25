@@ -641,3 +641,35 @@ let obj = {
 };
 
 console.log(Object.keys(obj));
+
+
+
+let str = 'deghgxt4433';
+
+console.log(str[0].toUpperCase() + str.slice(1));
+
+
+
+let str = '123456';
+res = str.split('').reverse().join('');
+
+console.log(res);
+
+
+
+let str = 'http://test.com';
+
+if (str.substring(0, 7) == 'http://') {
+    console.log('done');
+} else {
+    console.log('error..');
+}
+
+
+let str = 'http://test.html';
+
+if (str.substring(str.length - 5) == '.html') {
+    console.log('done');
+} else {
+    console.log('error');
+}
