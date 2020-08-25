@@ -554,3 +554,90 @@ for (let i = 1; i < words.length; i++) {
 }
 
 console.log(words.join(''));
+
+
+
+let a = [1, 2, 3],
+    b = [4, 5, 6];
+
+console.log(a.concat(b));
+console.log(a.reverse());
+
+
+let a = [1, 2, 3];
+
+a.push(4, 5, 6);
+console.log(a);
+
+
+let b = [1, 2, 3];
+
+b.unshift(4, 5, 6);
+console.log(b);
+
+
+
+let arr = ['js', 'css', 'jq'],
+    firstElem = arr.shift();
+
+console.log(firstElem);
+
+
+let arr = ['js', 'css', 'jq'],
+    firstElem = arr.pop();
+
+console.log(firstElem);
+
+
+
+let array = [1, 2, 3, 4, 5],
+    newElem = array.slice(0, 3);
+
+console.log(newElem);
+
+
+let array = [1, 2, 3, 4, 5],
+    newElem = array.slice(3);
+
+console.log(newElem);
+
+
+let array = [1, 2, 3, 4, 5],
+newElem = array.splice(1, 2);
+
+console.log(array);
+
+
+let array = [1, 2, 3, 4, 5],
+    newElem = array.splice(1, 3);
+
+console.log(newElem);
+
+
+let array = [1, 2, 3, 4, 5];
+newElem = array.splice(3, 0, 'a', 'b', 'c');
+
+console.log(array);
+
+
+let array = [1, 2, 3, 4, 5],
+newElem = array.splice(1, 0, 'a', 'b');
+newElem = array.splice(6, 0, 'c');
+newElem = array.splice(8, 0, 'e');
+
+console.log(array);
+
+
+let arr = [3, 4, 1, 2, 7, -8];
+
+console.log(arr.sort());
+
+
+
+let obj = {
+    js:'test', 
+    jq: 'hello', 
+    css: 'world'
+};
+
+console.log(Object.keys(obj));
