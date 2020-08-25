@@ -468,3 +468,89 @@ function factorial(n) {
 }
   
 console.log(factorial(4)); // 24
+
+
+let str = 'js';
+console.log(str.toUpperCase());
+
+let str = 'JS';
+console.log(str.toLowerCase());
+
+
+console.log('я учу javascript!'.length);
+
+
+let a = 'я учу javascript!';
+console.log(a.substr(2, 4) + a.substr(6, 10));
+console.log(a.substring(2, 16));
+console.log(a.slice(2, 16));
+console.log(a.indexOf('учу'));
+
+
+let str = 'text12345',
+    n = 5;
+
+if (str.length > n) {
+    result = str.slice(0, n + 1) + '...';
+} else {
+    result = str;
+}
+
+console.log(result);
+
+
+let str = 'Я-учу-javascript!';
+
+console.log(str.replace(/-/g, '!'));  // замена всех дефисов на восклицательный знак
+
+
+let str = 'я учу javascript!',
+    mas = str.split(' '); // слова, разделенные пробелом
+
+console.log(mas);
+
+
+let str = 'я учу javascript!',
+    mas = str.split('');  // каждый символ строки
+
+console.log(mas);
+
+
+let data = '2025-12-31',
+    mas = data.split('-');
+    newStr = mas[2] + '.' + mas[1] + '.' + mas[0];
+console.log(newStr);
+
+
+let arr = ['я', 'учу', 'javascript', '!'];
+
+console.log(arr.join('+'));
+
+
+let text = 'text321';
+
+console.log(text.slice(0, 1).toUpperCase() + text.slice(1));
+
+
+
+let text = 'text321 test gtf';
+
+let words = text.split(' ');
+
+for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1);
+}
+
+console.log(words.join(' '));
+
+
+
+let str = 'var_test_text';
+
+let words = str.split('_');
+
+for (let i = 1; i < words.length; i++) {
+    words[i] = words[i].slice(0,1).toUpperCase() + words[i].slice(1);
+}
+
+console.log(words.join(''));
