@@ -673,3 +673,52 @@ if (str.substring(str.length - 5) == '.html') {
 } else {
     console.log('error');
 }
+
+
+
+function square(number) {
+    return console.log(Math.pow(number, 2));
+}
+square(4);
+
+
+function sum(num1, num2) {
+    return console.log(num1 + num2);
+}
+sum(2, 7);
+
+
+function task(num1, num2, num3) {
+    return console.log((num1 - num2) / num3);
+}
+task(2, 7, 5);
+
+
+function week(day) {
+    switch(day) {
+        case 1:
+            console.log('Понедельник');
+            break;
+        case 2:
+            console.log('Вторник');
+            break;
+        case 3:
+            console.log('Среда');
+            break;
+        case 4:
+            console.log('Четверг');
+            break;
+        case 5:
+            console.log('Пятница');
+            break;
+        case 6:
+            console.log('Суббота');
+            break;
+        case 7:
+            console.log('Воскресенье');
+            break;
+    }
+}
+week(6);
+
+
