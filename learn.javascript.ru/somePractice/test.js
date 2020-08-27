@@ -722,3 +722,56 @@ function week(day) {
 week(6);
 
 
+
+let arr = [1, 2, 3, 5, 7, 8, 5],
+    flag = false;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 5) {
+        flag = true;
+        break;
+    }
+}
+
+if (flag === true) {
+    console.log('Да');
+} else {
+    console.log('Нет');
+}
+
+
+
+let arr = [1, 2, 3, 6, 6, 8, 6],
+    flag = false;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == arr[i - 1]) {
+        flag = true;
+        break;
+    }
+}
+
+if (flag === true) {
+    console.log('Есть два одинаковых числа подряд');
+} else {
+    console.log('Одинаковых чисел подряд нет');
+}
+
+
+
+let num = 31,
+    flag = false;
+
+for (let i = 2; i <= num; i++) {
+    if (num % i === 0) {
+        flag = true;
+        break;
+    }
+}
+
+if (flag) {
+    console.log('true');
+} else {
+    console.log('false');
+}
+
