@@ -794,4 +794,66 @@ logicTwo(2, 9);
 function negative(num) {
     return console.log(num < 0);
 }
-negative(-1);
+negative(-1)
+
+
+
+let str = '';
+
+for (let i = 1; i <= 9; i++) {
+    str += i;
+}
+
+console.log(str);
+
+
+
+let str = '';
+
+for (let i = 9; i > 0; i--) {
+    str += i;
+}
+
+console.log(str);
+
+
+
+let str = '-';
+
+for (let i = 1; i <= 9; i++) {
+    str += i + '-';
+    
+}
+
+console.log(str);
+
+
+let arr = [],
+    end = 0;
+
+while (end < 20) {
+    end++;
+    arr.push('x');
+    console.log(arr.join(''));
+}
+
+
+// пирамида чисел
+for (let i = 1; i <= 9; i++) {
+	for (let j = 1; j <= i; j++) {
+		document.write(i);
+	}
+	document.write('<br>');
+}
+
+
+
+let arr = [],
+    end = 0;
+
+while (end < 5) {
+    end++;
+    arr.push('xx');
+    console.log(arr.join(''));
+}
+
