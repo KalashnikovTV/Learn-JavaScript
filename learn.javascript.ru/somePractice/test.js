@@ -775,3 +775,23 @@ if (flag) {
     console.log('false');
 }
 
+
+
+function logic(num1, num2) {
+    return console.log(num1 === num2);
+}
+logic(2, 2);
+
+
+
+function logicTwo(num1, num2) {
+    return console.log(num1 + num2 > 10);
+}
+logicTwo(2, 9);
+
+
+
+function negative(num) {
+    return console.log(num < 0);
+}
+negative(-1);
