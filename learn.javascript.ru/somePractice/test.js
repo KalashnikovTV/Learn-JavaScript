@@ -857,3 +857,96 @@ while (end < 5) {
     console.log(arr.join(''));
 }
 
+
+
+let arr = [];
+
+for (let i = 0; i <= 5; i++) {
+    arr.push('x');
+    for (let j = 1; j <= i; j++) {
+        arr[i] += 'x';
+    }
+}
+
+console.log(arr);
+
+
+
+let arr = [];
+
+for (let i = 1; i <= 5; i++) {
+    let str = ''
+    for (let j = 1; j <= i; j++) {
+        str += String(i);
+    }
+    arr.push(str);
+}
+
+console.log(arr);
+
+
+
+function arrayFill(par1, par2) {
+    let arr = [];
+    for (let i = 0; i < par2; i++) {
+        arr[i] = par1;
+
+    }
+    console.log(arr);
+}
+arrayFill('x', 5);
+
+
+
+function calc(arr) {
+    let elem = 0;
+    for (let i = 0; i < arr.length; i++) {
+        elem += arr[i];
+        if (elem > 10) {
+            return i + 1;
+        }
+    }
+}
+
+let arr = [1, 2, 3, 4, 8, 10, 56];
+console.log(calc(arr));
+
+
+
+function rev(arr) {
+    result = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        result.push(arr[i]);
+    }
+    return result;
+}
+
+let arr = [1, 2, 3, 4, 5, 6];
+console.log(rev(arr));
+
+
+
+let arr = [[1, 2, 3], [4, 5], [6]],
+    sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+        sum += arr[i][j];
+    }
+}
+console.log(sum);
+
+
+
+let arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]],
+    sum = 0;
+
+for (let i = 0; i< arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+        for (let k = 0; k < arr[i][j].length; k++) {
+            sum += arr[i][j][k];
+        }
+    }
+}
+console.log(sum);
+
