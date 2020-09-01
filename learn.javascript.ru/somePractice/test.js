@@ -950,3 +950,49 @@ for (let i = 0; i< arr.length; i++) {
 }
 console.log(sum);
 
+
+
+function isNumberInRange(num) {
+    if (num > 0 && num < 10) {
+        return console.log(true);
+    } else {
+        return console.log(false);
+    }
+}
+isNumberInRange(4);
+
+
+let str = 'var_text_hello';
+
+console.log(str.replace(/_/g, ''));
+
+
+
+function getDivisors(num) {
+	var result = [];
+
+	for (var i = 1; i <= num; i++) {
+		if(num % i == 0) {
+			result.push(num);
+		}
+	}
+
+	return result;
+}
+
+alert(getDividers(24));
+
+
+function isSimple(num) {
+	for (var i = 2; i < num; i++) {
+		if(num % i == 0) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+alert(isSimple(13));
+
+
