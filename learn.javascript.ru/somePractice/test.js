@@ -996,3 +996,32 @@ function isSimple(num) {
 alert(isSimple(13));
 
 
+function rekurs(arr) {
+	console.log(arr[0]);
+	arr.splice(0, 1);
+	if (arr.length > 0) {
+		rekurs(arr);
+	}
+}
+
+
+
+function isSumLess(num) {
+    var sum = 0;
+    var arr = String(num).split('');
+    for (var i = 0; i < arr.length; i++) {
+        sum += parseInt(arr[i]);
+    }
+
+    if (sum > 9) {
+        return isSumLess(sum);
+    } else {
+        return sum;
+    }
+}
+
+var num = 1591;
+let final_num = isSumLess(num);
+console.log('Конечное число = ' + final_num);
+
+
