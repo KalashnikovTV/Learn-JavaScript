@@ -1025,3 +1025,97 @@ let final_num = isSumLess(num);
 console.log('Конечное число = ' + final_num);
 
 
+// Отработка циклов
+for (let i = 1; i <= 100; i++) {
+    console.log(i);
+}
+
+
+for (let i = 100; i >= 1; i--) {
+    console.log(i);
+}
+
+
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+        console.log(i);
+    };
+}
+
+
+let arr = [];
+for (let i = 0; i < 10; i++) {
+    arr[i] = 'x';
+}
+console.log(arr) 
+
+
+let arr = [];
+for (let i = 1; i <= 10; i++) {
+    arr.push(i);
+}
+console.log(arr) 
+
+
+let arr = [];
+for (let i = 0; i < 10; i++) {
+    arr.push(Math.random(i).toFixed(2));
+}
+console.log(arr)
+
+
+let arr = [];
+for (let i = 0; i < 10; i++) {
+    arr.push(Math.round(Math.random() * (10) + 1));
+}
+console.log(arr)
+
+
+let arr = [-1, 2, 3, -4 , 5, 7, 13, 15, 8],
+    arr2 = [];
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0 && arr[i] < 10) {
+        arr2.push(arr[i]);
+    }
+}
+console.log(arr2);
+
+
+let arr = [-1, 2, 3, -4 , 5, 7, 13, 15, 8, 5];
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 5) {
+        console.log('Есть');
+        break;
+    }
+}
+
+
+let arr = [1, 2, 3, -4, 5],
+    sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+}
+console.log(sum);
+
+
+let arr = [1, 2, 3, -4, 5],
+    sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    sum += arr[i] * arr[i];
+}
+console.log(sum);
+
+
+let arr = [1, 2, 3, -4, 5],
+    sum = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+}
+console.log(sum / arr.length);
+
+
