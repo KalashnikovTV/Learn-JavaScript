@@ -6,6 +6,93 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Задачи на основы DOM; Некоторые функции могут не вызываться, т.к. каша в test.js -->
+    <button onclick="alert('Привет!')">Нажми на меня!</button>
+
+    <button onmouseover="alert('Привет!')">Наведи на меня!</button>
+
+    <button ondblclick="alert('Привет!')">Двойной счелчок по мне!</button>
+
+    <div class="task4" style="border: 1px solid red; width: 300px; margin-top: 10px; height: 200px;" onmouseout="alert('Привет!')">
+        <p>Наведи на меня мышь - а потом убери!</p>
+    </div>
+
+    <div class="task5" style="margin-top: 10px;">
+        <input type="text" value="Ку-ку" id="input5">
+        <button onclick="buttonClick5()">Нажми на меня!</button>
+    </div>
+
+    <div class="task6" style="margin-top: 10px;">
+        <input type="text" value="Ку-ку" id="input6">
+        <button onclick="buttonClick6()">Нажми на меня!</button>
+    </div>
+
+    <img id="task7" src="img/1.jpg" alt="" style="width: 150px; height: 150px; margin-top: 10px;">
+    <button onclick="buttonClick7()">Нажми на меня!</button>
+
+    <input type="text" value="Нажми на меня!" onclick="buttonClick8(this)">
+
+    <div class="task14" style="margin-top: 10px;">
+        <input type="text" value="Ку-ку" id="task14"> 
+        <button onclick='buttonClick14()'>Нажми на меня!</button>
+    </div>
+
+    <div class="task15" style="margin-top: 10px;">
+        <input type="text" value="Ку-ку" id="task15"> 
+        <button onclick='buttonClick15()'>Нажми на меня!</button>
+		<button onclick='buttonClick152()'>Нажми потом на меня!</button>
+    </div>
+
+    <div class="task16" style="margin-top: 10px;">
+        <input type="text" value="Ку-ку" id="task16"> 
+        <button onclick="buttonClick16()">Нажми на меня!</button>
+    </div>
+
+    <div class="task18" style="margin-top: 10px;">
+        <p>Кнопка считает кол-во нажатий по ней.</p>
+		<input type="submit" value="0" id="task18" style="width: 270px; text-align: center;" onclick="buttonClick18()"> 
+    </div>
+
+    <div class="task24" style="margin-top: 10px;">
+        <p>Обратите внимание на курсор в различных состояниях.</p>
+		<input type="submit" value="Нажми на меня!" id="task24" style="width: 270px; text-align: center;" onclick="buttonClick24()"> 
+    </div>
+
+    <div class="task25" style="margin-top: 10px;">
+		<input type="text" id="task25" style="width: 200px; margin-bottom: 10px;">
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add('+')" value='Я добавлю +'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add('-')" value='Я добавлю -'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add('/')" value='Я добавлю /'>
+		<br>		
+		<input type="submit" style="width: 190px;" onclick="add('*')" value='Я добавлю *'>
+		<br>
+		<br>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(1)" value='1'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(2)" value='2'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(3)" value='3'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(4)" value='4'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(5)" value='5'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(6)" value='6'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(7)" value='7'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(8)" value='8'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(9)" value='9'>
+		<br>
+		<input type="submit" style="width: 190px;" onclick="add(0)" value='0'>
+    </div>
+
+
     
     <script src="test.js"></script>
 </body>

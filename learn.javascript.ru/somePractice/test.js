@@ -1119,3 +1119,71 @@ for (let i = 0; i < arr.length; i++) {
 console.log(sum / arr.length);
 
 
+
+// Задачи на основы работы с DOM
+function buttonClick5() {
+    let input5 = document.getElementById('input5');
+    alert(input5.value);
+}
+
+
+function buttonClick6() {
+    let input6 = document.getElementById('input6');
+    alert(input6.value = 'Ой, я поменял текст!');
+}
+
+function buttonClick7() {
+    let imgTask7 = document.getElementById('task7');
+    imgTask7.src = 'img/2.jpg';
+}
+
+
+function buttonClick8(event) {
+    alert(event.value);
+}
+
+
+function buttonClick14() {
+    let task14 = document.getElementById('task14');
+    task14.style.width = '200px';
+    task14.style.color = 'red';
+}
+
+
+function buttonClick15() {
+    let task15 = document.getElementById('task15');
+	task15.hidden = true;
+}
+function buttonClick152() {
+    let task15 = document.getElementById('task15');
+	task15.hidden = false;
+}
+
+
+function buttonClick16() {
+    let task16 = document.getElementById('task16');
+	task16.value = 'Ой, я поменял свой текст и css';
+	task16.style.color = 'red';
+	task16.style.borderRadius = '10px';
+}
+
+
+function buttonClick18() {
+    let task18 = document.getElementById('task18');
+	number = Number(task18.value);
+	number += 1;
+	task18.value = number;
+}
+
+
+function buttonClick24() {
+    let task24 = document.getElementById('task24');
+	task24.disabled = true;
+	task24.style.cursor = 'not-allowed';
+}
+
+
+function add(element) {
+    let task25 = document.getElementById('task25');
+	task25.value += element;
+}
