@@ -103,3 +103,20 @@ function task14() {
         elem[i].outerHTML = '<p class="task14">' + (i+1) + '. ' + elem[i].innerHTML + '</p>';
     }
 }
+
+
+function getDateBirth() {
+    let inputTime = document.querySelector('#inputtime'),
+        timeBirth = document.querySelector('#timebirth');
+
+    let inputRes = new Date(inputTime.value),
+        today = new Date(),
+        dayNow = new Date(today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate());
+        
+    let result = Math.floor((inputRes.getTime() - dayNow.getTime()) / (1000 * 60 * 60 * 24));
+
+    timeBirth.innerHTML = 'До вашего Дня Рождения осталось: ' + result + ' дней';
+}
+
+getDateBirth();
+setInterval(getDateBirth, 1000);

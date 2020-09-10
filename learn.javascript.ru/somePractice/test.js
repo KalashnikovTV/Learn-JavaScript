@@ -1187,3 +1187,88 @@ function add(element) {
     let task25 = document.getElementById('task25');
 	task25.value += element;
 }
+
+
+let date = new Date();
+
+console.log(date.getDate());
+console.log(date.getMonth() + 1);
+console.log(date.getFullYear());
+
+
+
+let date = new Date();
+
+function addZero(date) {
+    if (date <= 9) {
+        date = '0' + date;
+    }
+    return date;
+}
+
+console.log(addZero(date.getHours()) + ':' + addZero(date.getMinutes()) + ':' + 
+    addZero(date.getSeconds()) + ' ' + addZero(date.getDate()) + '.' + 
+    addZero(date.getMonth() + 1) + '.' + date.getFullYear());
+
+
+
+let date = new Date();
+
+console.log(date.getDay());
+
+
+
+let date = new Date(),
+    todayDay = date.getDay();
+
+function showDay(todayDay) {
+    let arr = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+    return arr[todayDay];
+}
+
+console.log(showDay(todayDay));
+
+
+
+let date = new Date('2015-01-07'),
+    day = date.getDay();
+
+function showDay(day) {
+    let arr = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+    return arr[day];
+}
+    
+console.log(showDay(day));
+
+
+
+let date = new Date();
+
+console.log('Кол-во минут с 1-го января 1970 до настоящего момента времени: ' + Math.floor(date.getTime() / 60 * 1000));
+
+
+
+let time = Date.parse('1988-03-01T00:00:00'),
+    now = new Date(),
+    result = now - time;
+
+result = result / (1000 * 60 * 60);
+
+console.log('Кол-во часов прошедшее между 1-го марта 1988 и текущим моментом времени: ' + Math.floor(result));
+
+
+let timeNow = new Date(),
+    timeStart = new Date(timeNow.getFullYear(), timeNow.getMonth(), timeNow.getDate(), 0, 0, 0, 0);
+
+let result = timeNow.getTime() - timeStart.getTime();
+
+console.log(Math.floor(result / 1000));
+
+
+
+let timeNow = new Date(),
+    timeEnd = new Date(timeNow.getFullYear(), timeNow.getMonth(), timeNow.getDate(), 23, 59, 59, 59);
+
+let result = timeEnd.getTime() - timeNow.getTime();
+
+console.log(Math.floor(result / 1000));
