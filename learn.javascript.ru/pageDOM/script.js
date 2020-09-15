@@ -31,8 +31,8 @@ console.log(elemTask5.classList.length);
 let elemTask6 = document.querySelector('#task6');
 let classNamesTask6 = elemTask6.classList;
 
-elemTask6.addEventListener('click', function () {
-    for (className of classNamesTask6) {
+elemTask6.addEventListener('click', function() {
+    for (let className of classNamesTask6) {
         alert(className);
     }
 });
@@ -47,7 +47,7 @@ elemTask7.style.cssText = 'color: red; font-size: 30px; width: 100px;';
 
 let elemTask8 = document.querySelector('#task8');
 
-elemTask8.addEventListener('click', function () {
+elemTask8.addEventListener('click', function() {
     alert('Название тега: ' + elemTask8.tagName);
 });
 
@@ -55,7 +55,7 @@ elemTask8.addEventListener('click', function () {
 
 let elemTask9 = document.querySelector('#task9');
 
-elemTask9.addEventListener('click', function () {
+elemTask9.addEventListener('click', function() {
     alert('Название тега в нижнем регистре: ' + elemTask8.tagName.toLowerCase());
 });
 
@@ -125,3 +125,173 @@ elemTask14.insertBefore(liTask14, elemTask14.firstElementChild);
 
 
 
+let elemTask15 = document.querySelector('#task15');
+elemTask15.insertAdjacentHTML('beforebegin', '<span>!!!</span>');
+
+
+
+let elemTask16 = document.querySelector('#task16');
+elemTask16.insertAdjacentHTML('afterend', '<span>!!!</span>');
+
+
+
+let elemTask17 = document.querySelector('.task17');
+elemTask17.insertAdjacentHTML('afterbegin', '<span>!!!</span>');
+
+
+
+let elemTask18 = document.querySelector('.task18');
+elemTask18.insertAdjacentHTML('beforeend', '<span>!!!</span>');
+
+
+
+let elemTask19 = document.querySelector('.task19');
+let firstChildTask19 = elemTask19.firstElementChild;
+
+firstChildTask19.style.color = 'red';
+
+
+
+let elemTask20 = document.querySelector('.task20');
+let firstChildTask20 = elemTask20.lastElementChild;
+
+firstChildTask20.style.color = 'red';
+
+
+
+let elemTask21 = document.querySelector('.task21');
+let firstChildTask21 = elemTask21.children;
+
+for (let elem of firstChildTask21) {
+    elem.innerHTML += '!';
+}
+
+
+
+let elemTask22 = document.querySelector('.task22');
+let neighbourTask22 = elemTask22.previousElementSibling;
+
+neighbourTask22.innerHTML += '!';
+
+
+
+let elemTask23 = document.querySelector('.task23');
+let neighbourTask23 = elemTask23.nextElementSibling;
+
+neighbourTask23.innerHTML += '!';
+
+
+
+let elemTask24 = document.querySelector('.task24');
+let neighbourTask24 = elemTask24.nextElementSibling.nextElementSibling;
+
+neighbourTask24.innerHTML += '!';
+
+
+
+let elemTask25 = document.querySelector('.task25');
+let elemParentTask25 = elemTask25.parentElement;
+
+elemParentTask25.style.backgroundColor = 'red';
+
+
+
+let elemTask26 = document.querySelector('.task26');
+let elemParentTask26 = elemTask26.parentNode.parentNode;
+
+elemParentTask26.style.backgroundColor = 'red';
+
+
+
+let elemTask27 = document.querySelector('.task27');
+let elemParentTask27 = elemTask27.parentElement;
+let elemInputTask27 = elemParentTask27.lastElementChild;
+
+elemInputTask27.addEventListener('click', function() {
+    elemParentTask27.removeChild(elemTask27);
+});
+
+
+
+let elemTask28 = document.querySelector('.task28');
+let elemInputTask28 = elemTask28.nextElementSibling;
+
+elemInputTask28.addEventListener('click', function() {
+    let elemLastChild28 = elemTask28.lastElementChild;
+    elemTask28.removeChild(elemLastChild28);
+});
+
+
+
+let elemTask29 = document.querySelector('.task29');
+
+elemTask29.addEventListener('click', () => {
+    elemTask29.remove();
+});
+
+
+
+let elemTask30 = document.querySelector('.task30');
+let elemListTask30 = elemTask30.children;
+
+for (let i = 0; i < elemListTask30.length; i++) {
+    elemListTask30[i].addEventListener('click', function() {
+        this.parentElement.removeChild(this);
+    });
+}
+
+
+
+let elemTask31 = document.querySelector('.task31');
+let elemInputTask31 = elemTask31.previousElementSibling;
+
+elemTask31.addEventListener('click', function() {
+    let cloneTask31 = elemInputTask31.cloneNode(true);
+    elemTask31.insertAdjacentElement('beforebegin', cloneTask31);
+});
+
+
+
+let arrTask32 = [1, 'dva', 3, 'four', 5];
+
+let ulForTask32 = document.createElement('ul');
+
+for (let i = 0; i < arrTask32.length; i++) {
+    let liForTask32 = document.createElement('li');
+    liForTask32.innerHTML = arrTask32[i];
+    ulForTask32.appendChild(liForTask32);
+}
+console.log(ulForTask32);
+document.body.appendChild(ulForTask32);
+
+
+
+let elemTask33 = document.querySelector('.task33');
+let elemSubmitTask33 = elemTask33.nextElementSibling;
+let parentElemTask33 = elemTask33.parentElement;
+
+elemSubmitTask33.addEventListener('click', function() {
+    let cloneSubmit33 = elemTask33.cloneNode(false);
+    parentElemTask33.appendChild(cloneSubmit33);
+});
+
+
+
+let elemTask34 = document.querySelector('.task34');
+/* let submit = document.querySelector('input'); */
+elemTask34.addEventListener('blur', function() {
+    for (let i = 0; i < elemTask34.value.length; i++) {
+        let clone = elemTask34.cloneNode(true);
+        clone.value = elemTask34.value[i];
+        elemTask34.parentElement.appendChild(clone);
+    }
+});
+
+
+
+let elemTask35 = document.querySelector('.task35');
+let parentElemTask35 = elemTask35.parentElement;
+
+elemTask35.addEventListener('click', function() {
+    parentElemTask35.style.cssText = 'display: none';
+});
