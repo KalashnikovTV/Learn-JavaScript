@@ -278,7 +278,6 @@ elemSubmitTask33.addEventListener('click', function() {
 
 
 let elemTask34 = document.querySelector('.task34');
-/* let submit = document.querySelector('input'); */
 elemTask34.addEventListener('blur', function() {
     for (let i = 0; i < elemTask34.value.length; i++) {
         let clone = elemTask34.cloneNode(true);
