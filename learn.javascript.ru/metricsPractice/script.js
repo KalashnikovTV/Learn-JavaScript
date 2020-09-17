@@ -163,3 +163,11 @@ elemTask22.addEventListener('click', function() {
 	this.style.width = (fullWidthTask22 * 2) + 'px';
     this.style.height = (fullHeightTask22 * 2) + 'px';
 });
+
+
+
+let elemTask23 = document.querySelector('.task23');
+
+elemTask23.addEventListener('click', function() {
+    window.scrollTo(0, document.documentElement.scrollHeight);
+});
