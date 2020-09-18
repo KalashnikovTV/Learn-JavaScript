@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="deleg">
+        <li>Текст 1</li>
+        <li>Текст 2</li>
+        <li>Текст 3</li>
+        <li>Текст 4</li>
+    </ul>
+    <button id="button" style="margin-bottom: 50px;">Нажми</button>
+
+    
+    <table class="table">
+        <tr onclick="event.stopPropagation();">
+            <th>Фамилия</th>
+            <th>Имя</th>
+        </tr>
+        <tr>
+            <td>Пупкин</td>
+            <td>Вася</td>
+        </tr>
+    </table>
+    <br>
+    <form class="form">
+        <input type="text" placeholder="Фамилия">
+        <input type="text" placeholder="Имя">
+    </form>
+    <br>
+    <input type="submit" value="Внести в таблицу" class="button-send">
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
