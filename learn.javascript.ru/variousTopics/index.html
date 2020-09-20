@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .cities {
+            display: none;
+        }
+        .active.cities {
+            display: inline-block;
+        }
+    </style>
+
+    <form id="form">
+        <input type="text" value="">
+        <input type="text" value="">
+    </form>
+    <p></p>
+    <button id="btnSend">Нажми</button>
+
+    <p>Форма: 1</p>
+    <form>
+        <input type="text" value="">
+        <input type="text" value="">
+    </form>
+    <br>
+    <p>Форма: 2</p>
+    <form>
+        <input type="text" value="">
+        <input type="text" value="">
+    </form>
+    <p></p>
+    <button id="btn">Нажми</button>
+
+    <br>
+    <select id="firstSelect" style="margin-top: 30px;">
+        <option value="one">Один</option>
+        <option value="two">Два</option>
+        <option value="three">Три</option>
+    </select>
+    <input type="text">
+
+    <br>
+    <select id="secondSelect" style="margin-top: 30px;">
+        <option value="one">Один</option>
+        <option value="two">Два</option>
+        <option value="three">Три</option>
+    </select>
+    <input type="text" placeholder="Введите от 0 до 2">
+    <button>Нажми</button>
+
+    <br>
+    <select id="countries">
+        <option value="ru">Россия</option>
+        <option value="by">Беларусь</option>
+        <option value="ua">Украина</option>
+    </select>
+    <select id="cities"></select>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
