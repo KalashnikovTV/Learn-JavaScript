@@ -197,3 +197,199 @@ resultTask12.addEventListener('click', function () {
         }
     }
 });
+
+
+
+let inputTask13 = document.querySelector('.task13');
+
+inputTask13.addEventListener('blur', checkNum);
+
+function checkNum() {
+    let str = inputTask13.value;
+    let arr = str.split('');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == 3) {
+            alert('Содержит число 3');
+            return;
+        }
+    }
+    alert('Не содержит число 3');
+    return;
+}
+
+
+
+let paragraphTask14 = document.querySelectorAll('.task14');
+let resultTask14 = document.querySelector('.result-task14');
+
+resultTask14.addEventListener('click', function () {
+    for (let i = 0; i < paragraphTask14.length; i++) {
+        paragraphTask14[i].innerHTML += (i + 1);
+    }
+});
+
+
+
+
+let paragraphTask15 = document.querySelectorAll('.task15');
+let buttonTask15 = document.querySelector('.button-task15');
+let resultTask15 = document.querySelector('.result-task15');
+
+buttonTask15.addEventListener('click', function () {
+    let arr = [];
+    for (let i = 0; i < paragraphTask15.length; i++) {
+        arr[i] = +paragraphTask15[i].innerHTML;
+        console.log(arr);
+    }
+    resultTask15.value = arr.sort(sortNum);
+});
+
+function sortNum(a, b) {
+    return (a - b);
+};
+
+
+
+let linkTask16 = document.querySelectorAll('.task16');
+
+function linkAddHref() {
+    for (let i = 0; i < linkTask16.length; i++) {
+        linkTask16[i].innerHTML += `(${linkTask16[i].href})`;
+    }
+}
+linkAddHref();
+
+
+
+let linkTask17 = document.querySelectorAll('.task17');
+
+function linkAddArrow() {
+    for (var i = 0; i < linkTask17.length; i++) {
+        if (linkTask17[i].href.indexOf('http://') == 0) {
+            linkTask17[i].innerHTML += ' стрелка';
+        }
+    }
+}
+linkAddArrow();
+
+
+
+let paragraphTask18 = document.querySelectorAll('.task18');
+
+for (let i = 0; i < paragraphTask18.length; i++) {
+    paragraphTask18[i].addEventListener('click', function () {
+        this.innerHTML = this.innerHTML * this.innerHTML;
+    });
+}
+
+
+
+let imagesTask19 = document.querySelectorAll('.task19');
+
+for (let i = 0; i < imagesTask19.length; i++) {
+    imagesTask19[i].addEventListener('click', function () {
+        this.height = this.height * 2;
+    });
+}
+
+
+
+let imagesTask20 = document.querySelectorAll('.task20');
+
+for (let i = 0; i < imagesTask20.length; i++) {
+    imagesTask20[i].addEventListener('click', increaseImg);
+}
+
+function increaseImg() {
+    this.height = this.height * 2;
+    this.removeEventListener('click', increaseImg);
+    this.addEventListener('click', reduceImg);
+}
+
+function reduceImg() {
+    this.height = this.height / 2;
+    this.removeEventListener('click', reduceImg);
+    this.addEventListener('click', increaseImg);
+}
+
+
+
+let imagesTask21 = document.querySelectorAll('.task21');
+let resultTask21 = document.querySelector('.result-task21');
+
+for (let i = 0; i < imagesTask21.length; i++) {
+    imagesTask21[i].addEventListener('click', function () {
+        resultTask21.src = this.src;
+    });
+}
+
+
+
+let inputTask22 = document.querySelector('.task22');
+let btnsTask22 = document.querySelectorAll('.btnsTask22');
+
+for (let i = 0; i < btnsTask22.length; i++) {
+    btnsTask22[i].addEventListener('click', function () {
+        let num = +inputTask22.value + +this.value;
+        if (num >= 0) {
+            inputTask22.value = num;
+        } else {
+            inputTask22.value = 0;
+        }
+    });
+}
+
+
+
+let inputTask23 = document.querySelector('.task23');
+
+inputTask23.addEventListener('blur', function () {
+    if (inputTask23.value >= 1 && inputTask23.value <= 100) {
+        inputTask23.style.background = 'green';
+    } else {
+        inputTask23.style.background = 'red';
+    }
+});
+
+
+
+let inputTask24 = document.querySelector('.task24');
+let resultTask24 = document.querySelector('.result-task24');
+
+document.documentElement.addEventListener('mouseup', function () {
+    let content = window.getSelection().toString();
+    inputTask24.value = content;
+});
+
+
+
+let paragraphTask25 = document.querySelectorAll('.task25');
+let btnTask25 = document.querySelector('.btnTask25');
+
+btnTask25.addEventListener('click', function () {
+    for (let i = 0; i < paragraphTask25.length; i++) {
+        let str = paragraphTask25[i].innerHTML;
+        let arr = +str.split(' ');
+        let arr2 = [];
+        arr2.push(arr);
+        if (max.arr2 == arr2[i]) {
+            paragraphTask25[i].style.background = 'red';
+        }
+    }
+    function max(arr2) {
+        return arr2.reduce((a, b) => a > b ? a : b);
+    }
+});
+
+
+
+let paragraphTask26 = document.querySelectorAll('.task26');
+let inputTask26 = document.querySelector('.inptTask26');
+
+for (let i = 0; i < paragraphTask26.length; i++) {
+    let count = 0;
+    paragraphTask26[i].addEventListener('click', function() {
+        count++;
+        inputTask26.value = count;
+    });
+}
