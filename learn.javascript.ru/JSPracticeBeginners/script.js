@@ -376,6 +376,7 @@ btnTask25.addEventListener('click', function () {
             paragraphTask25[i].style.background = 'red';
         }
     }
+
     function max(arr2) {
         return arr2.reduce((a, b) => a > b ? a : b);
     }
@@ -388,8 +389,184 @@ let inputTask26 = document.querySelector('.inptTask26');
 
 for (let i = 0; i < paragraphTask26.length; i++) {
     let count = 0;
-    paragraphTask26[i].addEventListener('click', function() {
+    paragraphTask26[i].addEventListener('click', function () {
         count++;
         inputTask26.value = count;
     });
 }
+
+
+
+let inputTask27 = document.querySelector('.task27');
+
+setInterval(function () {
+    inputTask27.value = inputTask27.value * inputTask27.value;
+}, 1000);
+
+
+
+let inputTask28 = document.querySelector('.task28');
+let strLenghtTask28 = inputTask28.previousElementSibling;
+let symbolsTask28 = strLenghtTask28.previousElementSibling;
+let buttonTask28 = document.querySelector('.button-task28');
+
+buttonTask28.addEventListener('click', makeRandom);
+
+//task 28, 29, 30 in this function
+function makeRandom() {
+    let result = '';
+    /* let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'; */
+    let characters = symbolsTask28.value;
+    let charactersLength = characters.length;
+    for (let i = 0; i < strLenghtTask28.value; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    inputTask28.value = result;
+}
+
+
+
+let inputTask31 = document.querySelector('.task31');
+let paragraphTask31 = inputTask31.nextElementSibling;
+
+inputTask31.addEventListener('blur', redNum);
+
+function redNum() {
+    let num = parseInt(inputTask31.value);
+    if (num > 0) {
+        inputTask31.value = inputTask31.value - 1;
+        paragraphTask31.innerHTML = inputTask31.value;
+    }
+    if (num == 0) {
+        clearInterval(idIntervalTask31);
+    }
+}
+let idIntervalTask31 = window.setInterval(redNum, 1000);
+
+
+
+let paragraphTask32 = document.querySelector('.task32');
+
+window.setInterval(paragColor, 1000);
+
+function paragColor() {
+    if (paragraphTask32.style.color == 'red') {
+        paragraphTask32.style.color = 'green';
+    } else {
+        paragraphTask32.style.color = 'red';
+    }
+}
+
+
+
+let paragraphTask33 = document.querySelector('.task33');
+let i = 0;
+
+window.setInterval(function () {
+    let arr = ['red', 'green', 'blue', 'yellow', 'pink'];
+    paragraphTask33.style.color = arr[i];
+    i++;
+    if (i >= arr.length) {
+        i = 0;
+    }
+}, 1000);
+
+
+
+let paragraphTask34 = document.querySelector('.task34');
+let linkTask34 = paragraphTask34.nextElementSibling;
+
+let arrStr = ['один', 'два', 'три', 'четыре'];
+paragraphTask34.innerHTML = arrStr[0];
+let j = 1;
+
+linkTask34.addEventListener('click', function () {
+    paragraphTask34.innerHTML = arrStr[j];
+    j++;
+    if (j >= arrStr.length) {
+        j = 0;
+    }
+});
+
+
+
+let inputsTask35 = document.querySelectorAll('.task35');
+let numTask35 = 1;
+let b = 0;
+window.setInterval(inpValue, 1000);
+
+function inpValue() {
+    inputsTask35[b].value = numTask35;
+    b++;
+    numTask35++;
+    if (b >= inputsTask35.length) {
+        b = 0;
+    }
+}
+
+
+
+let paragraphTask44 = document.querySelector('.task44');
+let btnTask44 = document.querySelectorAll('.btn-task44');
+
+for (let i = 0; i < btnTask44.length; i++) {
+    btnTask44[i].addEventListener('click', removeBlock);
+}
+
+function removeBlock() {
+    this.parentNode.style.display = 'none';
+}
+
+
+
+let inputsTask42 = document.querySelector('.task42');
+let liTask42 = document.querySelectorAll('.ol-task42 li');
+
+let n = 0;
+inputsTask42.addEventListener('change', function () {
+    n = +inputsTask42.value;
+    liTask42[n - 1].style.color = 'red';
+});
+
+
+
+let inputTask45 = document.querySelector('.task45');
+let btnTask45 = document.querySelector('.btn-task45');
+let ulTask45 = document.querySelector('.ul-task45');
+
+btnTask45.addEventListener('click', function () {
+    let str = inputTask45.value;
+    let arr = str.split(',');
+    ulTask45.innerHTML = '';
+    for (let i = 0; i < arr.length; i++) {
+        let li = document.createElement('li');
+        li.innerHTML = arr[i];
+        ulTask45.appendChild(li);
+    }
+});
+
+
+
+let inputTask46 = document.querySelector('.task46');
+let paragraphTask46 = inputTask46.nextElementSibling;
+
+inputTask46.addEventListener('keypress', function (event) {
+    if (event.keyCode == 13) {
+        paragraphTask46.innerHTML += inputTask46.value + ', ';
+        inputTask46.value = '';
+    }
+});
+
+
+
+let divTask47 = document.querySelectorAll('.task47');
+let btnTask47 = document.querySelector('.btn-task47');
+
+btnTask47.addEventListener('click', function () {
+    let result = '';
+    for (let i = 0; i < divTask47.length; i++) {
+        result = divTask47[i].innerHTML.slice(0, 10) + '...';
+        divTask47[i].innerHTML = result;
+    }
+});
+
