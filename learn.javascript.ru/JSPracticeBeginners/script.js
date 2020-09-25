@@ -570,3 +570,121 @@ btnTask47.addEventListener('click', function () {
     }
 });
 
+
+
+let checkboxTask36 = document.querySelector('.task36');
+let linkTask36 = document.querySelector('.link-task36');
+
+linkTask36.addEventListener('click', function() {
+    if (checkboxTask36.checked) {
+        checkboxTask36.checked = false;
+    } else {
+        checkboxTask36.checked = true;
+    }
+});
+
+
+
+let checkboxsTask37 = document.querySelectorAll('.task37');
+let btnTask37 = document.querySelector('.btn-task37');
+
+btnTask37.addEventListener('click', function() {
+    for (let i = 0; i < checkboxsTask37.length; i++) {
+        if (checkboxsTask37[i].checked) {
+            checkboxsTask37[i].checked = false;
+        } else {
+            checkboxsTask37[i].checked = true;
+        }
+    }
+});
+
+
+
+let radiosTask38 = document.querySelectorAll('.task38');
+let resultTask38 = document.querySelector('.result-task38');
+
+for (let i = 0; i < radiosTask38.length; i++) {
+    radiosTask38[i].addEventListener('change', resTask38);
+}
+
+function resTask38() {
+    if (this.checked) {
+        resultTask38.innerHTML = this.value;
+    }
+}
+
+
+
+let checkboxsTask39 = document.querySelectorAll('.task39');
+let resultTask39 = document.querySelector('.result-task39');
+
+for (let i = 0; i < checkboxsTask39.length; i++) {
+    checkboxsTask39[i].addEventListener('change', resTask39);
+}
+
+function resTask39() {
+    if (this.checked) {
+        resultTask39.innerHTML = resultTask39.innerHTML + this.value + ', ';
+    }
+}
+
+
+
+let checkboxTask40 = document.querySelector('.task40');
+let resultTask40 = document.querySelector('.result-task40');
+
+checkboxTask40.addEventListener('change', function() {
+    if (this.checked) {
+        resultTask40.style.display = 'inline-block';
+    } else {
+        resultTask40.style.display = 'none';
+    }
+});
+
+
+
+let checkboxsTask41 = document.querySelectorAll('.task41');
+let resultsTask41 = document.querySelectorAll('.result-task41');
+
+for (let i = 0; i < checkboxsTask41.length; i++) {
+    checkboxsTask41[i].addEventListener('change', function() {
+        if (this.checked) {
+            resultsTask41[i].style.display = 'inline-block';
+        } else {
+            resultsTask41[i].style.display = 'none';
+        }
+    });
+}
+
+
+
+let checkboxsTask43 = document.querySelectorAll('.task43');
+let resultsTask43 = document.querySelector('.result-task43');
+
+for (let i = 0; i < checkboxsTask43.length; i++) {
+    checkboxsTask43[i].addEventListener('change', function() {
+        if (this.checked) {
+            resultsTask43.style.cssText = this.value;
+        } else {
+            resultsTask43.style.cssText = '';
+        }
+    });
+}
+
+
+
+let tdsTask48 = document.querySelectorAll('.task48');
+let btnTask48 = document.querySelector('.btn-task48');
+let max = '';
+let num = 0;
+
+btnTask48.addEventListener('click', function() {
+    for (let i = 0; i < tdsTask48.length; i++) {
+        if (+tdsTask48[i].innerHTML > max) {
+            max = +tdsTask48[i].innerHTML;
+            num = i;
+        }
+    }
+    tdsTask48[num].style.background = 'red';
+});
+
