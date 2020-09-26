@@ -575,7 +575,7 @@ btnTask47.addEventListener('click', function () {
 let checkboxTask36 = document.querySelector('.task36');
 let linkTask36 = document.querySelector('.link-task36');
 
-linkTask36.addEventListener('click', function() {
+linkTask36.addEventListener('click', function () {
     if (checkboxTask36.checked) {
         checkboxTask36.checked = false;
     } else {
@@ -588,7 +588,7 @@ linkTask36.addEventListener('click', function() {
 let checkboxsTask37 = document.querySelectorAll('.task37');
 let btnTask37 = document.querySelector('.btn-task37');
 
-btnTask37.addEventListener('click', function() {
+btnTask37.addEventListener('click', function () {
     for (let i = 0; i < checkboxsTask37.length; i++) {
         if (checkboxsTask37[i].checked) {
             checkboxsTask37[i].checked = false;
@@ -633,7 +633,7 @@ function resTask39() {
 let checkboxTask40 = document.querySelector('.task40');
 let resultTask40 = document.querySelector('.result-task40');
 
-checkboxTask40.addEventListener('change', function() {
+checkboxTask40.addEventListener('change', function () {
     if (this.checked) {
         resultTask40.style.display = 'inline-block';
     } else {
@@ -647,7 +647,7 @@ let checkboxsTask41 = document.querySelectorAll('.task41');
 let resultsTask41 = document.querySelectorAll('.result-task41');
 
 for (let i = 0; i < checkboxsTask41.length; i++) {
-    checkboxsTask41[i].addEventListener('change', function() {
+    checkboxsTask41[i].addEventListener('change', function () {
         if (this.checked) {
             resultsTask41[i].style.display = 'inline-block';
         } else {
@@ -662,7 +662,7 @@ let checkboxsTask43 = document.querySelectorAll('.task43');
 let resultsTask43 = document.querySelector('.result-task43');
 
 for (let i = 0; i < checkboxsTask43.length; i++) {
-    checkboxsTask43[i].addEventListener('change', function() {
+    checkboxsTask43[i].addEventListener('change', function () {
         if (this.checked) {
             resultsTask43.style.cssText = this.value;
         } else {
@@ -678,7 +678,7 @@ let btnTask48 = document.querySelector('.btn-task48');
 let max = '';
 let num = 0;
 
-btnTask48.addEventListener('click', function() {
+btnTask48.addEventListener('click', function () {
     for (let i = 0; i < tdsTask48.length; i++) {
         if (+tdsTask48[i].innerHTML > max) {
             max = +tdsTask48[i].innerHTML;
@@ -687,4 +687,78 @@ btnTask48.addEventListener('click', function() {
     }
     tdsTask48[num].style.background = 'red';
 });
+
+
+
+let tdsTask49 = document.querySelectorAll('.task49');
+let inputTask49 = document.querySelector('.result-task49');
+let btnTask49 = document.querySelector('.btn-task49');
+
+btnTask49.addEventListener('click', function () {
+    let arr = [];
+    for (let i = 0; i < tdsTask49.length; i++) {
+        arr.push(tdsTask49[i].innerHTML);
+
+    }
+    arr.sort(sortFunction);
+    let str = arr.join(', ');
+    inputTask49.value = str;
+});
+
+function sortFunction(a, b) {
+    return (a - b);
+}
+
+
+
+window.onload = function () {
+    let tdsTask51 = document.querySelectorAll('.task51');
+    let resultTask51 = document.querySelector('.result-task51');
+    let clear = document.querySelector('#clear');
+    let go = document.querySelector('#go');
+
+    for (let i = 0; i < tdsTask51.length; i++) {
+        tdsTask51[i].addEventListener('click', function () {
+            this.classList.add('active');
+        });
+    }
+
+    go.addEventListener('click', function () {
+        let tdsTask51 = document.querySelectorAll('.active');
+        let sum = 0;
+        for (let i = 0; i < tdsTask51.length; i++) {
+            sum += Number(tdsTask51[i].innerHTML);
+        }
+        resultTask51.innerHTML = 'Сумма активных ячеек: ' + sum;
+    });
+
+    clear.addEventListener('click', function () {
+        let tdsTask51 = document.querySelectorAll('.task51');
+        for (let i = 0; i < tdsTask51.length; i++) {
+            tdsTask51[i].classList.remove('active');
+        }
+        resultTask51.innerHTML = 'Сумма активных ячеек: ' + 0;
+    });
+};
+
+
+
+window.onload = function () {
+    let tdsTask52 = document.querySelectorAll('.task52');
+    for (let i = 0; i < tdsTask52.length; i++) {
+        tdsTask52[i].addEventListener('click', function () {
+            let val = this.innerHTML;
+            this.style.display = "none";
+            let inp = document.createElement('input');
+            inp.value = val;
+            inp.addEventListener('change', function () {
+                this.previousElementSibling.innerHTML = this.value;
+                this.previousElementSibling.style.display = "";
+                this.parentNode.removeChild(this);
+            });
+            this.parentNode.insertBefore(inp, this.nextSibling);
+        });
+    }
+};
+
 
