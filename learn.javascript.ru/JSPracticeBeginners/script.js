@@ -762,3 +762,62 @@ window.onload = function () {
 };
 
 
+
+
+let firstCurr = document.getElementById('first_curr');
+let secondCurr = document.getElementById('second_curr');
+let numb = document.getElementById('numb');
+let result = document.getElementById('result-b');
+let rates = {
+    'rur': 1.00,
+    'usd': 58.50,
+    'eur': 62.15
+};
+let answer = 0;
+
+firstCurr.addEventListener('change', convert);
+secondCurr.addEventListener('change', convert);
+numb.addEventListener('change', convert);
+
+function convert() {
+    if (firstCurr.value != secondCurr.value) {
+        result.innerHTML = '';
+        let answer = rates[firstCurr.value] / rates[secondCurr.value] * numb.value;
+        result.innerHTML = answer;
+    } else {
+        alert('Выберите другую валюту!');
+    }
+}
+
+
+
+let liTask58 = document.querySelectorAll('.task58');
+let btnTask58 = document.querySelector('.btn-task58');
+
+btnTask58.addEventListener('click', function() {
+    let liArr = [];
+    for (let i = 0; i < liTask58.length; i++) {
+        liArr[i] = liTask58[i].innerHTML;
+    }
+    /* console.log(liArr); */
+    liArr.sort(function(a, b) {return a - b});
+    /* console.log(liArr); */
+    for (let i = 0; i < liTask58.length; i++) {
+        liTask58[i].innerHTML = liArr[i];
+    }
+});
+
+
+
+let parag = document.querySelector('.result-task59');
+let links = document.querySelectorAll('.task59');
+
+for (let i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+        for (let j = 0; j < links.length; j++) {
+            links[j].style.background = '';
+        }
+        this.style.background = 'red';
+        parag.innerHTML = this.innerHTML;
+    });
+}
