@@ -166,8 +166,8 @@ let k1 = function() {
 		}
 		parag.innerHTML += newNum + ', ';
 		alreadyUsed.push(newNum);
-	}
-}
+	};
+};
 
 let but = document.querySelector('.btn-task12').addEventListener('click', k1());
 let parag = document.querySelector('.parag-task12');
