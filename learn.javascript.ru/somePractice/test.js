@@ -1119,6 +1119,41 @@ for (let i = 0; i < arr.length; i++) {
 console.log(sum / arr.length);
 
 
+let arrJS = ['Привет, ', 'мир', '!'];
+console.log(arrJS[0] + arrJS[1] + arrJS[2]);
+
+
+const arrJS6 = {
+	'ru':['голубой', 'красный', 'зеленый'],
+	'en':['blue', 'red', 'green'],
+};
+console.log(arrJS6.ru[0]);
+
+
+let arrJS8 = ['a', 'b', 'c', 'd'];
+console.log(arrJS8[0] + arrJS8[1] + ', ' + arrJS8[2] + arrJS8[3]);
+
+
+let arrJS9 = [2, 5, 3, 9];
+let elemJS1 = arrJS9[0] * arrJS9[1];
+let elemJS2 = arrJS9[2] * arrJS9[3];
+let result = elemJS1 + elemJS2;
+console.log(result);
+
+
+let objJS = {
+    'c': ['test'],
+};
+for (let key in objJS) {
+    console.log(key);
+}
+console.log(objJS['c']);
+
+
+let objJS14 = {js:['jQuery', 'Angular'], php: 'hello', css: 'world'};
+console.log(objJS14.js[0]);
+
+
 
 // Задачи на основы работы с DOM
 function buttonClick5() {
