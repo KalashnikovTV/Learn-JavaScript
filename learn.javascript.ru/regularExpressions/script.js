@@ -142,3 +142,45 @@ console.log(str3.replace(/\/\*.*?\*\//g, ""));
 
 let str4 ="<!--dfdf--> sadsad <!--ghgh-->";
 console.log(str4.replace(/<!--([\s\S]*?)-->/g, ""));
+
+
+// На позитивный и негативный просмотр
+console.log('aaab'.replace(/aaa(?=b)/g, '!'));
+
+console.log('aaaw aaab'.replace(/aaa(?!b)/g, '!'));
+
+// На replace
+let res1 = '10 6 3 2'.replace(/\d+/g, function(match) {
+	return match * match;
+});
+console.log(res1);
+
+
+let res2 = "2aaa'3'bbb'4'".replace(/\d+(?=')/g, function (match) {
+	return match * match;
+});
+console.log(res2);
+
+
+let res3 = "2aaa'3'{{текст}}'4'".replace(/(т)(е)(к)(с)(т)(?=}})/g, '$5$4$3$2$1');
+console.log(res3);
+
+
+let res4 = '23 + 35 = '.replace(/(\d+)\s\+\s(\d+)\s= /g, function(match, match1, match2) {
+	let sum = +match1 + +match2;
+	return match + sum;
+});
+console.log(res4);
+
+// Головоломки
+console.log(/^(19\d\d|20\d\d|2100)$/.test('2101'));  
+
+console.log(/^([01]\d|2[0-3]):[0-5]\d$/.test('24:00'));
+
+console.log(/^([01]\d|2[0-3]):[0-5]\d\s[ap]m$/.test('24:00'));
+
+console.log('aaa zzqzqaq hsdds'.replace(/\W*\w*(\w)\1\w*\W*/g, ''));
+
+console.log('dsf xxx xxx sd'.replace(/\b(\w+)\s+\1/g, "$1"));
+
+console.log('dsf xxx xxx xxx xxx xxx sd'.replace(/\b(\w+)\b(?:\s+\1\b)+/g, '$1'));
