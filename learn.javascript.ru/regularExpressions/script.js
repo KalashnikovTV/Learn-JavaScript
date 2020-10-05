@@ -94,3 +94,51 @@ console.log('a\\a a\\\\a a\\\\\\a'.replace(/a\\{3}a/g, '!'));
 
 // На экранировку посложнее
 console.log('bbb /aaa\\ bbb /ccc\\'.replace(/\/[a-z]+\\/g, '!'));
+
+
+// На карманы при замене
+console.log('aaa@bbb eee7@kkk'.replace(/(\w+)@(\w+)/g, '$2@$1'));
+
+console.log('a1b2c3'.replace(/(\d+)/g, '$1$1'));
+
+// Задачи на test и match
+console.log(/^[a-zA-z]+\W?[a-z]+@[a-zA-z]+\.[a-z]{2,3}$/.test('my_mail@mail.ru'));
+
+console.log('my_mail@mail.ru'.match(/([a-zA-z]+\W?[a-z]+@[a-zA-z]+\.[a-z]{2,3})/));
+
+console.log(/^([a-z.-_]+\.[a-z]{2,3})$/.test('my-site.com'));
+
+console.log(/^http:\/\/[a-z.-_]+\.[a-z]{2,3}$/.test('http://site.ru'));
+
+console.log(/^https?:\/\/[a-z.-_]+\.[a-z]{2,3}$/.test('https://site.ru'));
+
+console.log(/^https?/.test('http://site.ru'));
+
+console.log(/\.(php|txt|html)$/.test('index.php'));
+
+console.log(/\.jpe?g$/.test('index.jpeg'));
+
+console.log(/^\d{12}$/.test('1234567891312312323'));
+
+let arr = [];
+let sum = 0;
+let str="46 vf 45 ty";
+arr = str.match(/\d/g);
+
+for (let i = 0; i < arr.length; i++) {
+	sum = sum + parseInt(arr[i]);
+}
+console.log(sum); 
+
+// Задачи на replace
+let str1 = "http://site.ru aa aaa http://site.com";
+console.log(str1.replace(/http:\/\/site\.[a-z]{2,3}/g, "<a href=\"http:\/\/site\.ru\">site\.ru<\/a>"));
+
+let str2 = "12 aa aaa 56";
+console.log(str2.replace(/\s{2}/g, " "));   
+
+let str3 ="/*dfdf*/ sadsad";
+console.log(str3.replace(/\/\*.*?\*\//g, ""));
+
+let str4 ="<!--dfdf--> sadsad <!--ghgh-->";
+console.log(str4.replace(/<!--([\s\S]*?)-->/g, ""));
