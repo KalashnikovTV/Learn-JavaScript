@@ -66,3 +66,44 @@ elem7.addEventListener('dragstart', function() {
 elem7.addEventListener('dragend', function() {
     parent7.style.border = '2px solid black';
 });
+
+
+
+// Перемещение элемента мышкой
+let elem8 = document.querySelector('.elem8');
+let offsetX,
+    offsetY;
+
+elem8.addEventListener('dragstart', function(event) {
+
+    offsetX = event.offsetX;
+    offsetY = event.offsetY;
+});
+
+elem8.addEventListener('dragend', function(event) {
+    console.log(event.pageX, event.pageY);
+    elem8.style.top = (event.pageY - offsetY) + 'px';
+    elem8.style.left = (event.pageX - offsetX) + 'px';
+});
+
+
+// Перемещение одного элемента на другой + Объект event.dataTransfer
+let elems9 = document.querySelectorAll('.elem9');
+let parent9 = document.querySelector('.parent9');
+
+elems9.forEach(function(elem, index) {
+    elem.addEventListener('dragstart', function(event) {
+        //console.log(this);
+        //current = this;
+        event.dataTransfer.setData('text', index);
+    });
+});
+
+parent9.addEventListener('dragover', function(event) {
+    event.preventDefault();
+});
+
+parent9.addEventListener('drop', function(event) {
+    console.log(event.dataTransfer.getData('text'));
+    this.appendChild(elems9[event.dataTransfer.getData('text')]);
+});

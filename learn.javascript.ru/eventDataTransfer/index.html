@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .elem {
+            width: 100px;
+            height: 100px;
+            border: 2px solid fuchsia;
+        }
+        .parent {
+            width: 200px;
+            height: 200px;
+            margin-top: 40px;
+            border: 2px solid black;
+        }
+        #panel {
+            width: 300px;
+            height: 100px;
+            border: 1px solid green;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        #panel3 {
+            width: 500px;
+            height: 200px;
+            border: 1px solid green;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .parent3 {
+            width: 100px;
+            height: 120px;
+            margin-top: 40px;
+            border: 2px solid black;
+            margin-left: 10px;
+        }
+        .elem1,
+        .elem3,
+        .elem4,
+        .elem5,
+        .elem6 {
+            width: 50px;
+            height: 50px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .parent1,
+        .parent4,
+        .parent5,
+        .curs {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #cursors {
+            display: flex;
+        }
+        .curs {
+            margin-right: 10px;
+        }
+    </style>
+
+    <div id="panel">
+        <div class="elem1 elem" draggable="true">
+            Тяни меня 111
+        </div>
+        <div class="elem1 elem" draggable="true">
+            Тяни меня 222
+        </div>
+        <div class="elem1 elem" draggable="true">
+            Тяни меня 333
+        </div>
+        <div class="elem1 elem" draggable="true">
+            Тяни меня 444
+        </div>
+    </div>
+    <div class="parent parent1"></div>
+
+    <div id="panel">
+        <div class="elem3 elem" draggable="true">
+            Тяни меня 111
+        </div>
+        <div class="elem3 elem" draggable="true">
+            Тяни меня 222
+        </div>
+        <div class="elem3 elem" draggable="true">
+            Тяни меня 333
+        </div>
+        <div class="elem3 elem" draggable="true">
+            Тяни меня 444
+        </div>
+    </div>
+    <div id="panel3">
+        <div class="parent3"></div>
+        <div class="parent3"></div>
+        <div class="parent3"></div>
+        <div class="parent3"></div>
+    </div>
+
+    <div id="panel">
+        <div class="elem4 elem" draggable="true">
+            Тяни меня 111
+        </div>
+        <div class="elem4 elem" draggable="true">
+            Тяни меня 222
+        </div>
+        <div class="elem4 elem" draggable="true">
+            Тяни меня 333
+        </div>
+        <div class="elem4 elem" draggable="true">
+            Тяни меня 444
+        </div>
+    </div>
+    <div class="parent parent4">Удаляет принимаемые элементы из панели</div>
+
+    <div id="panel">
+        <div class="elem5 elem" draggable="true">
+            Тяни меня 111
+        </div>
+        <div class="elem5 elem" draggable="true">
+            Тяни меня 222
+        </div>
+        <div class="elem5 elem" draggable="true">
+            Тяни меня 333
+        </div>
+        <div class="elem5 elem" draggable="true">
+            Тяни меня 444
+        </div>
+    </div>
+    <div class="parent parent5"></div>
+
+    <div id="panel">
+        <div class="elem6 elem" draggable="true">
+            Тяни меня 111
+        </div>
+        <div class="elem6 elem" draggable="true">
+            Тяни меня 222
+        </div>
+        <div class="elem6 elem" draggable="true">
+            Тяни меня 333
+        </div>
+        <div class="elem6 elem" draggable="true">
+            Тяни меня 444
+        </div>
+    </div>
+    <div id="cursors">
+        <div class="parent parent6 curs">Курсор Копирование</div>
+        <div class="parent parent7 curs">Курсор Перемещение</div>
+        <div class="parent parent8 curs">Курсор Связывание данных</div>
+        <div class="parent parent9 curs">Курсор Запрет действий</div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
