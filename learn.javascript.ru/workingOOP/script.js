@@ -161,3 +161,37 @@ console.log(validator.isEmail('phphtml@mail.ru'));
 console.log(validator.isDomain('phphtml.net'));
 console.log(validator.isDate('12.05.2020'));
 console.log(validator.isPhone('+375 (29) 817-68-92')); //тут можете формат своей страны
+
+
+
+// Наследование классов
+class User {
+	constructor(name, surname) {
+		this.name = name;
+		this.surname = surname;
+	}
+
+	getFullName() {
+		return this.name + ' ' + this.surname;
+	}
+}
+
+class Student extends User{
+    constructor(name, surname, year) {
+        super(name, surname);
+        this.year = year;
+    }
+
+    getCourse() {
+        let currentYear = new Date();
+        return currentYear.getFullYear() - this.year;
+    }
+}
+
+let student = new Student('Иван', 'Иванов', 2017);
+
+console.log(student.name); //выведет 'Иван'
+console.log(student.surname); //выведет 'Иванов'
+console.log(student.getFullName()); //выведет 'Иван Иванов'
+console.log(student.year); //выведет 2017
+console.log(student.getCourse()); //выведет 3 - третий курс, так как текущий год 2020
