@@ -123,7 +123,7 @@ class MyString {
     }
 
     ucWords(str) {
-        return str.split(' ').map(function(item) {
+        return str.split(' ').map(function (item) {
             return item[0].toUpperCase() + item.substring(1, item.lenght);
         }).join(' ');
     }
@@ -163,20 +163,19 @@ console.log(validator.isDate('12.05.2020'));
 console.log(validator.isPhone('+375 (29) 817-68-92')); //тут можете формат своей страны
 
 
-
 // Наследование классов
 class User {
-	constructor(name, surname) {
-		this.name = name;
-		this.surname = surname;
-	}
+    constructor(name, surname) {
+        this.name = name;
+        this.surname = surname;
+    }
 
-	getFullName() {
-		return this.name + ' ' + this.surname;
-	}
+    getFullName() {
+        return this.name + ' ' + this.surname;
+    }
 }
 
-class Student extends User{
+class Student extends User {
     constructor(name, surname, year) {
         super(name, surname);
         this.year = year;
@@ -195,3 +194,140 @@ console.log(student.surname); //выведет 'Иванов'
 console.log(student.getFullName()); //выведет 'Иван Иванов'
 console.log(student.year); //выведет 2017
 console.log(student.getCourse()); //выведет 3 - третий курс, так как текущий год 2020
+
+
+// Работа с элементами
+class Elem {
+    constructor(selector) {
+        this.elem = document.querySelector(selector);
+    }
+
+    html(text) {
+        this.elem.innerHTML = text;
+        return this;
+    }
+
+    attr(name, value) {
+        this.elem.setAttribute(name, value);
+        return this;
+    }
+
+    append(text) {
+        this.elem.append(text);
+        return this;
+    }
+
+    prepend(text) {
+        this.elem.prepend(text);
+        return this;
+    }
+}
+
+let elem = new Elem('#element');
+
+elem.html('!'); //запишет в текст элемента '!'
+elem.append('!'); //запишет в начало элемента '!'
+elem.prepend('!'); //запишет в конец элемента '!'
+elem.attr('class', 'www'); //запишет в атрибут class значение www
+
+//Должны работать цепочки методов:
+elem.html('hello').append('!').prepend('!');
+elem.attr('class', 'www').attr('title', 'hello');
+
+
+
+class Elem2 {
+    constructor(selector) {
+        this.elem = document.querySelectorAll(selector);
+    }
+
+    html(str) {
+        this.each(function(item) {
+            if (str) {
+                item.innerHTML = str;
+            }
+        });
+        return this;
+    }
+
+    append(str) {
+        this.each(function(item) {
+            item.innerHTML += str;
+        });
+        return this;
+    }
+
+    prepend(str) {
+        this.each(function(item) {
+            item.innerHTML = str + item.innerHTML;
+        });
+        return this;
+    }
+
+    attr(str1, str2) {
+        this.each(function(item) {
+            item.setAttribute(str1, str2);
+        });
+        return this;
+    }
+
+    each(func) {
+        Array.from(this.elem).forEach(func);
+        return this;
+    }
+}
+
+let elem2 = new Elem2('div#text');
+
+elem2.html('text1').append('text2').prepend('text3').attr('class', 'www').each(function(item) {
+    console.log(item);
+});
+
+
+// Практика
+class Rectangle {
+    constructor(width, height) {
+        this.elem = document.createElement('div');
+
+        this.setWidth(width);
+        this.setHeight(height);
+        this.elem.style.border = '2px solid green';
+
+        document.body.appendChild(this.elem);
+    }
+
+    setWidth(width) {
+        this.elem.style.width = width + 'px';
+    }
+
+    getWidth() {
+        return parseInt(this.elem.style.width);
+    }
+
+    setHeight(height) {
+        this.elem.style.height = height + 'px';
+    }
+
+    getHeight() {
+        return parseInt(this.elem.style.height);
+    }
+
+    setBorder(border) {
+        this.elem.style.border = border;
+    }
+}
+
+let rect1 = new Rectangle(150, 150);
+rect1.setWidth(250);
+rect1.setHeight(270);
+rect1.setBorder('2px solid red');
+
+console.log('Ширина квадрата rect1: ' + rect1.getWidth());
+console.log('Высота квадрата rect1: ' + rect1.getHeight());
+
+let rect2 = new Rectangle(100, 100);
+rect2.setWidth(180);
+rect2.setHeight(150);
+
+console.log('Ширина квадрата rect2: ' + rect2.getWidth());
+console.log('Высота квадрата rect2: ' + rect2.getHeight());
