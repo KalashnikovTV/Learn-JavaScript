@@ -158,14 +158,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         render() {
             const element = document.createElement('div');
-            
+
             if (this.classes.length === 0) {
                 this.element = 'menu__item';
                 element.classList.add(this.element);
             } else {
                 this.classes.forEach(className => element.classList.add(className));
             }
-            
+
             element.innerHTML = `
                 <img src=${this.src} alt=${this.alt}>
                 <h3 class="menu__item-subtitle">${this.title}</h3>
@@ -233,36 +233,31 @@ window.addEventListener('DOMContentLoaded', () => {
             `;
             form.insertAdjacentElement('afterend', statusMessage);
 
-            const request = new XMLHttpRequest();
-            request.open('POST', 'server.php');
-
             // в связке XMLHttpRequest и Form data, нам заголовок устанавливать не нужно, он устанавливается автоматически
             // request.setRequestHeader('Content-type', 'multipart/form-data');
 
-            // через JSON
-            request.setRequestHeader('Content-type', 'application/json');
             const formData = new FormData(form);
 
-            // formData в JSON
             const object = {};
-            formData.forEach(function(value, key) {
+            formData.forEach(function (value, key) {
                 object[key] = value;
             });
 
-            const json = JSON.stringify(object);
-
-            //request.send(formData);
-            request.send(json);
-
-            request.addEventListener('load', () => {
-                if (request.status === 200) {
-                    console.log(request.response);
-                    showThanksModal(message.success);
-                    form.reset();
-                    statusMessage.remove();
-                } else {
-                    showThanksModal(message.failure);
-                }
+            fetch('server.php', {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(object)
+            }).then(data => data.text())
+            .then(data => {
+                console.log(data);
+                showThanksModal(message.success);
+                statusMessage.remove();
+            }).catch(() => {
+                showThanksModal(message.failure);
+            }).finally(() => {
+                form.reset();
             });
         });
     }
