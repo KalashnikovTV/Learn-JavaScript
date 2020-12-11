@@ -1,0 +1,82 @@
+{
+  "people": [
+    {
+      "name": "John",
+      "surname": "Smith",
+      "sex": "male",
+      "age": 26,
+      "photo": "https://m.media-amazon.com/images/M/MV5BMjM3MjM3NTAxM15BMl5BanBnXkFtZTgwMTY0Nzg2OTE@._V1_.jpg"
+    },
+    {
+      "name": "Angela",
+      "surname": "Whinston",
+      "sex": "female",
+      "age": 31,
+      "photo": "https://onthewingsoflove.blob.core.windows.net/album/011816-Angela/1.jpg"
+    },
+    {
+      "name": "Alex",
+      "surname": "Solberry",
+      "sex": "male",
+      "age": 35,
+      "photo": "https://www.gv.com/img/team-large/john-lyman.jpg"
+    },
+    {
+      "name": "Anna",
+      "surname": "Rayan",
+      "sex": "female",
+      "age": 23,
+      "photo": "https://pbs.twimg.com/profile_images/1086838222817247233/djx065tP_400x400.jpg"
+    },
+    {
+      "name": "Michael",
+      "surname": "Dobkin",
+      "sex": "male",
+      "age": 30,
+      "photo": "https://images.squarespace-cdn.com/content/v1/56d2032e07eaa0756ae5a8fe/1561454924771-NM1NTUN3H18WWCS37H7P/ke17ZwdGBToddI8pDm48kFn01b69qibFV6p4ATINgYx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmaHJ0CCIp0h94CjFWATtzumDyWwG6cTlYaiji1mbxg2_decyTpAb-46CnvkjVgn6l/Hillberg_by+Michael-Wharley+2.jpg"
+    },
+    {
+      "name": "Someone",
+      "surname": "Else",
+      "age": 26,
+      "id": 0.1335182958228689
+    },
+    {
+      "name": "Someone",
+      "surname": "Else",
+      "age": 26,
+      "id": 0.9986025937647935
+    },
+    {
+      "name": "Someone",
+      "surname": "Else",
+      "age": 26,
+      "id": 0.7184802531924381
+    },
+    {
+      "name": "",
+      "age": "",
+      "id": "0.23531724921616237"
+    },
+    {
+      "name": "123",
+      "age": "3333",
+      "id": "0.7511753952770319"
+    },
+    {
+      "name": "33",
+      "age": "11",
+      "id": "0.29269373221305695"
+    },
+    {
+      "name": "232323",
+      "age": "asdasd",
+      "id": "0.9409196563689894"
+    },
+    {
+      "name": "32323",
+      "age": "2131",
+      "id": "0.5249611804566376"
+    }
+  ]
+}
